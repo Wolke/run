@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 80vh;
+}
+
+#game-canvas {
+    width: 100%;
+    height: 100%;
+    /* 移除這行 */
+    /* background-color: #87CEEB; */
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+#start-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#jump-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: none; /* 初始隱藏按鈕 */
+}
+
+@media (max-width: 600px) {
+    #game-container {
+        height: 90vh;
+    }
+    
+    #score {
+        font-size: 16px;
+    }
+    
+    #start-button {
+        font-size: 16px;
+    }
+
+    #jump-button {
+        display: block; /* 在移動設備上顯示按鈕 */
+    }
+}
